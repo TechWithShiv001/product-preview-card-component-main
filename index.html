@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .card {
+      margin: 10px !important;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'montserrat': ['Montserrat', 'serif'],
+            'fraunces': ['Fraunces', 'serif']
+          },
+          colors: {
+            'cream': 'hsl(30, 38%, 92%)',
+            'cyan': 'hsl(158, 36%, 37%)',
+            'dark-blue': 'hsl(212, 21%, 14%)',
+            'grayish-blue': 'hsl(228, 12%, 48%)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-cream min-h-screen flex items-center justify-center">
+  <div class="md:flex md:flex-row card max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-xl">
+    <div>
+      <!-- Mobile Image -->
+      <img class="object-cover block md:hidden h-full w-full" src="./images/image-product-mobile.jpg"
+        alt="Chanel Perfume for mobile">
+
+      <!-- Desktop Image -->
+      <img class="object-cover hidden md:block h-full w-full" src="./images/image-product-desktop.jpg"
+        alt="Chanel Perfume for desktop">
+    </div>
+    <div class="p-7 w-fit">
+      <header>
+        <p class="uppercase mb-3 tracking-widest font-montserrat text-grayish-blue font-medium text-sm">Perfume</p>
+        <h1 class="font-fraunces md:pr-4 font-bold text-dark-blue text-3xl mb-4">Gabrielle Essence Eau De Parfum</h1>
+      </header>
+      <main>
+        <p class="text-grayish-blue font-montserrat text-sm font-medium mb-4">A floral, solar and voluptuous
+          interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.</p>
+
+        <span class="font-fraunces font-bold text-3xl text-cyan">$149.99</span>
+        <span class="line-through text-grayish-blue text-sm ml-4">$169.99</span>
+        <button
+          class="mt-6 bg-cyan text-white text-sm font-montserrat font-bold justify-center py-3 px-6 rounded-lg flex items-center gap-2 w-full">
+          <img src="./images/icon-cart.svg" alt="Cart"> Add to Cart
+        </button>
+      </main>
+    </div>
+  </div>
+  <!-- <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer> -->
+</body>
+
+</html>
